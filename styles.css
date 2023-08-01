@@ -1,209 +1,164 @@
-:root {
-  --mouse: 0.5;
+* 
+{
+    overflow-x: hidden !important;
 }
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  width: 100%;
-  margin: 0;
+body 
+{
+    margin: 0;
+    font-family: sans-serif;
 }
 
-a {
-  color: #40a1c4;
+.left
+{
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    background-color: rgb(85, 176, 255);
+    padding-right: 1rem;
+    text-align: center;
 }
 
-.top {
-  background-color: rgb(255, 140, 98);
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.top > .text {
-  position: absolute;
-  text-align: center;
-  font-size: 4rem;
-  font-weight: 1000;
-  color: white;
-  user-select: none;
-}
-.top > .subtitle {
-  position: absolute;
-  bottom: 0;
-  color: white;
+.text-effect 
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.text:nth-child(1) {
-  z-index: 10;
-  transform: rotateX(calc((var(--mouse) / 2 + 0.75) * 40deg)) translateY(calc((var(--mouse) + 0.5) * 0 * 1px));
-  color: white;
+.layer 
+{
+    position: absolute;
+    font-size: 3rem;
+    font-weight: 2000;
+    user-select: none;
 }
 
-.text:nth-child(2) {
-  z-index: 9;
-  transform: rotateX(calc((var(--mouse) / 2 + 0.75) * 40deg)) translateY(calc((var(--mouse) + 0.5) * 1 * 1px));
-  color: white;
+.l1 
+{
+    color: rgb(255, 255, 255);
+    transform: rotateX(35deg);
 }
 
-.text:nth-child(3) {
-  z-index: 8;
-  transform: rotateX(calc((var(--mouse) / 2 + 0.75) * 40deg)) translateY(calc((var(--mouse) + 0.5) * 2 * 1px));
-  color: #c2e1ec;
+.l2
+{
+    color: rgb(215, 237, 255);
+    transform: translateY(0.1rem) rotateX(35deg);
 }
 
-.text:nth-child(4) {
-  z-index: 7;
-  transform: rotateX(calc((var(--mouse) / 2 + 0.75) * 40deg)) translateY(calc((var(--mouse) + 0.5) * 3 * 1px));
-  color: #a1d1e2;
+.l3 
+{
+    color: rgb(164, 213, 255);
+    transform: translateY(0.2rem) rotateX(35deg);
 }
 
-.text:nth-child(5) {
-  z-index: 6;
-  transform: rotateX(calc((var(--mouse) / 2 + 0.75) * 40deg)) translateY(calc((var(--mouse) + 0.5) * 4 * 1px));
-  color: #8ec7dc;
+.l4 
+{
+    color: rgb(85, 176, 255);
+    transform: translateY(0.3rem) rotateX(35deg);
 }
 
-.text:nth-child(6) {
-  z-index: 5;
-  transform: rotateX(calc((var(--mouse) / 2 + 0.75) * 40deg)) translateY(calc((var(--mouse) + 0.5) * 5 * 1px));
-  color: #81c1d8;
+.l5 
+{
+    color: rgb(3, 138, 255);
+    transform: translateY(0.4rem) rotateX(35deg);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
-.text:nth-child(7) {
-  z-index: 4;
-  transform: rotateX(calc((var(--mouse) / 2 + 0.75) * 40deg)) translateY(calc((var(--mouse) + 0.5) * 6 * 1px));
-  color: #78bcd5;
+.right
+{
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    right: 0;
 }
 
-.text:nth-child(8) {
-  z-index: 3;
-  transform: rotateX(calc((var(--mouse) / 2 + 0.75) * 40deg)) translateY(calc((var(--mouse) + 0.5) * 7 * 1px));
-  color: #71b9d3;
+main 
+{
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.text:nth-child(9) {
-  z-index: 2;
-  transform: rotateX(calc((var(--mouse) / 2 + 0.75) * 40deg)) translateY(calc((var(--mouse) + 0.5) * 8 * 1px));
-  color: #6bb6d1;
+main > div 
+{
+    width: 45%;
+    height: 100%;
 }
 
-.text:nth-child(10) {
-  z-index: 1;
-  transform: rotateX(calc((var(--mouse) / 2 + 0.75) * 40deg)) translateY(calc((var(--mouse) + 0.5) * 9 * 1px));
-  color: #67b4d0;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+main > div > h2:not(:first-child)
+{
+    margin-top: 3rem;
 }
 
-main {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
+ul 
+{
+    list-style: none;
+    padding-left: 0;
 }
 
-button.circle {
-  position: absolute;
-  bottom: 5rem;
-  z-index: 10;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 2rem;
-  font-size: 1.5rem;
-  font-weight: 900;
-  border: none;
-  color: #bbb;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  transition: 0.2s ease;
-}
-button.circle span {
-  transition: 0.2s ease;
-}
-button.circle:hover {
-  cursor: pointer;
-  width: 5rem;
-  font-size: 1.75rem;
-  color: black;
-}
-button.circle:hover.left-btn {
-  padding-right: 1rem;
-  right: -3rem;
-}
-button.circle:hover.right-btn {
-  padding-left: 1rem;
-  left: -3rem;
-}
-button.circle.left-btn {
-  justify-content: end;
-  right: -2rem;
-}
-button.circle.right-btn {
-  left: -2rem;
+li 
+{
+    list-style: none;
 }
 
-section.panel {
-  position: absolute;
-  z-index: 10;
-  height: 100vh;
-  background-color: white;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.4s cubic-bezier(0.71, 0.13, 0.13, 1.39);
-}
-section.panel.left {
-  padding-left: 7rem;
-  width: 18rem;
-  left: -25rem;
-}
-section.panel.left.active {
-  left: -5rem;
-}
-section.panel.right {
-  padding-left: 2rem;
-  width: 23rem;
-  right: -25rem;
-}
-section.panel.right.active {
-  right: -5rem;
-}
-section.panel .margin-top {
-  margin-top: 3rem;
-}
-section.panel p {
-  max-width: 17rem;
-}
-section.panel .wrapper {
-  overflow-y: scroll;
-  height: 100vh;
-}
-section.panel.active button {
-  transform: rotate(180deg);
-  background-color: rgb(255, 140, 98);
-}
-section.panel.active button span {
-  color: white;
-}
-section.panel.highground {
-  z-index: 100;
+li > a 
+{
+    color: black;
+    text-decoration: underline solid 1px rgb(3, 138, 255);
 }
 
-p.jp {
-  margin-bottom: -1rem;
+li > a > b
+{
+    color: gray;
 }
 
-.logo {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  width: 3rem;
+li:not(:last-child)
+{
+    margin-bottom: 0.2rem;
 }
 
-@media only screen and (max-width: 400px) {
-  .logo {
-    width: 2rem;
-  }
+@media screen and not (min-width: 1270px)
+{
+    .left 
+    {
+        position: static;
+        width: 100%;
+        height: 10rem;
+    }
+
+    .right 
+    {
+        position: static;
+        padding-top: 1rem;
+        width: 100%;
+        height: fit-content;
+        background-color: white;
+    }
 }
 
-/*# sourceMappingURL=styles.css.map */
+@media screen and not (min-width: 670px)
+{
+    .layer
+    {
+        font-size: 2.5rem;
+    }
+
+    main 
+    {
+        display: block;
+    }
+
+    main > div 
+    {
+        width: 100%;
+    }
+
+    .newsletter > h2 
+    {
+        margin-top: 2rem;
+    }
+}
