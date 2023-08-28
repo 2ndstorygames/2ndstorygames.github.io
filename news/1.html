@@ -3,8 +3,13 @@
     <head>
         <link rel="stylesheet" href="news.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="news.js" defer></script>
     </head>
     <body>
+        <div class="links">
+            <a href="0.html">← Previous</a>
+            <a href="2.html">Next →</a>
+        </div>
         <h2 class="date">２０２３年８月７日</h2>
         <h1>Saving & Dialogue</h1>
         <h3>By: Noel Nimstad</h3>
@@ -25,8 +30,13 @@
         <hr>
         <h2>Saving</h2>
         <p>Saving is yet another feature I felt was, minorly important to a RPG game, so I decided it was worth the trouble of throwing together.
-        <br/><br/>Nerd info: TBST will save your game in JSON converted to binary to lower the risk of a file corrupting
         </p>
+        <button class="nerd-info" data-number="0">🤓 Nerd Info</button>
+        <div id="0" class="hidden nerd-panel">
+            <img src="img/save_code.png" class="code"/>
+            The game stores your game inside a C# class, and when the player saves their data the game will convert that class into JSON, and then binary and then write it to a file stored away somewhere where the player won't find it and accidentaly mess it up.
+            <img src="img/save_load_code.png" class="code large"/>
+        </div>
         <hr>
         <h2>Extra</h2>
         <p>Here's some gameplay footage, including the revamped first room!</p>
