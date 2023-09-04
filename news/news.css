@@ -49,6 +49,7 @@ hr
 .code.large
 {
     width: 500px;
+    height: fit-content;
 }
 
 .img-note 
@@ -96,4 +97,15 @@ hr
 .hidden 
 {
     display: none;
+}
+
+.center 
+{
+    text-align: center;
+}
+
+.flex 
+{
+    display: flex;
+    align-items: center;
 }
