@@ -109,3 +109,11 @@ hr
     display: flex;
     align-items: center;
 }
+
+@media screen and (max-width: 1200px)
+{
+    .flex 
+    {
+        display: block;
+    }
+}
