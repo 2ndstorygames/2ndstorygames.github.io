@@ -49,7 +49,7 @@ hr
 .code.large
 {
     width: 500px;
-    height: fit-content;
+    height: auto;
 }
 
 .img-note 
